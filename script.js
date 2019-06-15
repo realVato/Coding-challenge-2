@@ -1,17 +1,19 @@
-// Average score
-var avgJohn = (89 + 120 + 103) / 3;
-var avgMike = (116 + 94 + 123) / 3;
-var avgMary = (97 + 134 + 105) / 3;
+var teamJohn = 89 + 180 + 103;
+var teamMark = 116 + 104 + 123;
+var teamMary = 97 + 304 + 105;
+console.log(teamJohn, teamMark, teamMary);
 
-if (avgJohn > avgMike && avgJohn > avgMary) {
-    console.log('John\'s team wins with ' + avgJohn + ' points');
-} else if (avgMike > avgJohn && avgMike > avgMary) {
-    console.log('Mike\'s team wins with ' + avgMike + ' points');
-} else if (avgMary > avgJohn && avgMary > avgMike) {
-    console.log('Mary\'s team wins with ' + avgMary + ' points');
-} else {
-    console.log('It\'s a draw!');
+var johnAvg = teamJohn / 3;
+var markAvg = teamMark / 3;
+var maryAvg = teamMary / 3;
+console.log(johnAvg, markAvg, maryAvg);
+
+if (johnAvg > markAvg && johnAvg > maryAvg) {
+    console.log('John\'s team has the highest avg score!');
+} else if (johnAvg === markAvg && johnAvg === maryAvg) {
+    console.log('All teams have the same avg');
+} else if (johnAvg < markAvg && markAvg > maryAvg) {
+    console.log('Mark\'s team has the highest avg score!');
+} else if (maryAvg > markAvg && johnAvg < maryAvg){
+    console.log('Mary\'s team has the highest avg score!');
 }
-    
-
-console.log(avgJohn, avgMike, avgMary);
